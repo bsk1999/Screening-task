@@ -15,20 +15,20 @@
       let clearIntervalBtnEl = document.getElementById("clearIntervalBtn");
       let resetButton = document.getElementById("resetButton");
       setIntervalBtnEl.onclick = function() {
-    let counter = 0;
-    uniqueId = setInterval(function() {
-    counterValue.textContent = counter;
-    counter = counter + 1;
-  }, 1000);
-};
+      let counter = 0;
+      uniqueId = setInterval(function() {
+      counterValue.textContent = counter;
+      counter = counter + 1;
+    }, 1000);
+  };
 
-clearIntervalBtnEl.onclick = function() {
-  clearInterval(uniqueId);
-};
+    clearIntervalBtnEl.onclick = function() {
+    clearInterval(uniqueId);
+  };
 
-resetButton.onclick = function(){
-  counterValue.textContent = "";
-}
+    resetButton.onclick = function(){
+    counterValue.textContent = "";
+  }
 
 
     </script>
