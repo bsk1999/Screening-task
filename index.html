@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <heading>Screening Task</heading>
+    <h1>Hello World!<span id="counterValue"></span></h1>
+    <div>
+        <button id="setIntervalBtn">Start</button>
+        <button id="clearIntervalBtn">Stop</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <script>
+      let counterValue = document.getElementById("counterValue");
+      let setIntervalBtnEl = document.getElementById("setIntervalBtn");
+      let clearIntervalBtnEl = document.getElementById("clearIntervalBtn");
+      let resetButton = document.getElementById("resetButton");
+      setIntervalBtnEl.onclick = function() {
+    let counter = 0;
+    uniqueId = setInterval(function() {
+    counterValue.textContent = counter;
+    counter = counter + 1;
+  }, 1000);
+};
+
+clearIntervalBtnEl.onclick = function() {
+  clearInterval(uniqueId);
+};
+
+resetButton.onclick = function(){
+  counterValue.textContent = "";
+}
+
+
+    </script>
+  </body>
+</html>
